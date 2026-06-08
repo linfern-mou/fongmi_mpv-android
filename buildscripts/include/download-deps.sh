@@ -72,6 +72,10 @@ if [ ! -d lua ]; then
 		tar -xz -C lua --strip-components=1
 fi
 
+# shaderc is built from the NDK-provided sources; this placeholder keeps it in
+# the dependency graph without cloning an extra copy.
+mkdir -p shaderc
+
 # libplacebo
 [ ! -d libplacebo ] && git clone --recursive https://github.com/haasn/libplacebo
 
