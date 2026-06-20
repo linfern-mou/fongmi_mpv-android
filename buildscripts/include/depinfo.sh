@@ -27,6 +27,7 @@ v_libarchive=3.8.7
 v_libdvdread=7.0.1
 v_libdvdnav=7.0.0
 v_libcurl=8.20.0
+v_rubberband=4.0.0
 
 
 ## Dependency tree
@@ -54,7 +55,8 @@ dep_libarchive=(libiconv bzip2 xz zstd)
 dep_libdvdread=()
 dep_libdvdnav=(libdvdread)
 dep_libcurl=(mbedtls)
-dep_mpv=(ffmpeg libass lua libplacebo libbluray libiconv uchardet libarchive libdvdnav libcurl)
+dep_rubberband=()
+dep_mpv=(ffmpeg libass lua libplacebo libbluray libiconv uchardet libarchive libdvdnav libcurl rubberband)
 dep_mpv_android=(mpv)
 
 
@@ -63,7 +65,7 @@ dep_mpv_android=(mpv)
 # pinned ffmpeg revision
 v_ci_ffmpeg=n8.1.1
 # bump when the prefix build recipe changes without a dependency version change
-v_ci_prefix=3
+v_ci_prefix=6
 
 # filename used to uniquely identify a build prefix
-ci_tarball="prefix-ndk-${v_ndk}-vulkan-shaderc-lua-${v_lua}-unibreak-${v_unibreak}-harfbuzz-${v_harfbuzz}-fribidi-${v_fribidi}-freetype-${v_freetype}-libxml2-${v_libxml2}-fontconfig-${v_fontconfig}-mbedtls-${v_mbedtls}-libbluray-${v_libbluray}-libiconv-${v_libiconv}-uchardet-${v_uchardet}-bzip2-${v_bzip2}-xz-${v_xz}-zstd-${v_zstd}-libarchive-${v_libarchive}-libdvdread-${v_libdvdread}-libdvdnav-${v_libdvdnav}-libcurl-${v_libcurl}-ffmpeg-${v_ci_ffmpeg}-prefix-${v_ci_prefix}.tgz"
+ci_tarball="prefix-ndk-${v_ndk}-vulkan-shaderc-lua-${v_lua}-unibreak-${v_unibreak}-harfbuzz-${v_harfbuzz}-fribidi-${v_fribidi}-freetype-${v_freetype}-libxml2-${v_libxml2}-fontconfig-${v_fontconfig}-mbedtls-${v_mbedtls}-libbluray-${v_libbluray}-libiconv-${v_libiconv}-uchardet-${v_uchardet}-bzip2-${v_bzip2}-xz-${v_xz}-zstd-${v_zstd}-libarchive-${v_libarchive}-libdvdread-${v_libdvdread}-libdvdnav-${v_libdvdnav}-libcurl-${v_libcurl}-rubberband-${v_rubberband}-ffmpeg-${v_ci_ffmpeg}-prefix-${v_ci_prefix}.tgz"

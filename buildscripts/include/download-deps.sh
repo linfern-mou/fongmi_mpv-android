@@ -82,6 +82,7 @@ if [ ! -d uchardet ]; then
 	$WGET https://gitlab.freedesktop.org/uchardet/uchardet/-/archive/v${v_uchardet}/uchardet-v${v_uchardet}.tar.gz -O - | \
 		tar -xz -C uchardet --strip-components=1
 fi
+
 # bzip2
 if [ ! -d bzip2 ]; then
 	mkdir bzip2
@@ -109,6 +110,7 @@ if [ ! -d libarchive ]; then
 	$WGET https://github.com/libarchive/libarchive/releases/download/v${v_libarchive}/libarchive-${v_libarchive}.tar.xz -O - | \
 		tar -xJ -C libarchive --strip-components=1
 fi
+
 # libdvdread
 if [ ! -d libdvdread ]; then
 	mkdir libdvdread
@@ -122,12 +124,21 @@ if [ ! -d libdvdnav ]; then
 	$WGET https://downloads.videolan.org/pub/videolan/libdvdnav/${v_libdvdnav}/libdvdnav-${v_libdvdnav}.tar.xz -O - | \
 		tar -xJ -C libdvdnav --strip-components=1
 fi
+
 # libcurl
 if [ ! -d libcurl ]; then
 	mkdir libcurl
 	$WGET https://curl.se/download/curl-${v_libcurl}.tar.xz -O - | \
 		tar -xJ -C libcurl --strip-components=1
 fi
+
+# rubberband
+if [ ! -d rubberband ]; then
+	mkdir rubberband
+	$WGET https://github.com/breakfastquay/rubberband/archive/refs/tags/v${v_rubberband}.tar.gz -O - | \
+		tar -xz -C rubberband --strip-components=1
+fi
+
 # libass
 [ ! -d libass ] && git clone https://github.com/libass/libass
 
