@@ -18,8 +18,10 @@ permissions:
 
 env:
   FFMPEG_GIT_COMMIT: ${{ inputs.ffmpeg_commit || '' }}
-  MPV_GIT_URL: https://github.com/FongMi/mpv.git
+  FFMPEG_GIT_URL: https://github.com/linfern-mou/FONGMI_FFmpeg.git
+  MPV_GIT_URL: https://github.com/linfern-mou/fongmi_mpv.git
   MPV_GIT_REF: fongmi
+  LIBPLACEBO_GIT_URL: https://github.com/linfern-mou/libplacebo.git
   MPV_ANDROID_ARCHES: armv7l arm64
 
 jobs:
